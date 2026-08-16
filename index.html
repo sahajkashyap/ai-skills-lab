@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 1: What AI Is and What It Can't Do · AI Skills for Everyone</title>
+<style>
+  :root {
+    --ink: #1d1d1f;
+    --soft: #55555c;
+    --paper: #faf9f6;
+    --card: #ffffff;
+    --line: #e3e1da;
+    --accent: #175e54;
+    --accent-soft: #eaf3f1;
+    --warn: #8a4b08;
+    --warn-soft: #fdf3e4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.06rem;
+    line-height: 1.65;
+  }
+  header, main, footer {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  header { padding-top: 3.5rem; padding-bottom: 1rem; }
+  .kicker {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.75rem;
+  }
+  h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 0.5rem; font-weight: normal; }
+  .standfirst { font-size: 1.15rem; color: var(--soft); margin: 0 0 0.5rem; }
+  h2 {
+    font-size: 1.45rem;
+    font-weight: normal;
+    margin: 2.75rem 0 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 { font-size: 1.05rem; font-family: Helvetica, Arial, sans-serif; margin: 1.5rem 0 0.5rem; }
+  p { margin: 0 0 1rem; }
+  .exercise {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.5rem 1.5rem 1.25rem;
+    margin: 1.5rem 0;
+  }
+  .exercise-label {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.25rem;
+  }
+  .exercise h3 { margin-top: 0; font-size: 1.25rem; font-family: Georgia, serif; font-weight: normal; }
+  .try {
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin: 0.75rem 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+  }
+  .try b { display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+  .check {
+    background: var(--warn-soft);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin: 0.75rem 0 0;
+  }
+  .check b { display: block; font-family: Helvetica, Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warn); margin-bottom: 0.3rem; }
+  details {
+    margin: 0.75rem 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    background: #fcfbf9;
+  }
+  summary { cursor: pointer; font-family: Helvetica, Arial, sans-serif; font-size: 0.9rem; color: var(--soft); }
+  details[open] summary { margin-bottom: 0.5rem; }
+  .word-card {
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .word-card .word { font-size: 1.6rem; }
+  .word-card .say { font-family: Helvetica, Arial, sans-serif; color: var(--soft); font-size: 0.95rem; }
+  ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.4rem; }
+  .quiet { color: var(--soft); font-size: 0.95rem; }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    border-top: 1px solid var(--line);
+    color: var(--soft);
+    font-size: 0.95rem;
+  }
+  footer a { color: var(--accent); }
+  @media print {
+    body { background: #fff; }
+    .exercise, .word-card { border: 1px solid #bbb; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="kicker">AI Skills for Everyone · Lab 1 of a series</p>
+  <h1>What AI Is and What It Can't Do</h1>
+  <p class="standfirst">A simple start to using AI at work. Self-paced, about 45 minutes, no technical background needed.</p>
+  <p class="quiet">You will need this page and an AI chat window open side by side. Claude is the one I use in the examples. ChatGPT, Copilot, or Gemini work just as well. Every exercise here uses your real work, not practice examples. That is on purpose.</p>
+</header>
+
+<main>
+
+<h2>First, the ten-second version of what AI is</h2>
+
+<p>AI is a digital companion, a partner you can work with. You can talk to it or type to it, and it can answer back.</p>
+
+<p>It learned by reading. A lot. Books, websites, and stories, more than any person could read in a hundred lives. It reads context, and it can usually figure out, pretty accurately, what you are trying to say. But here is the tricky part: AI does not really know things the way you do. Underneath, it is guessing the next word. It is like a super smart guess machine.</p>
+
+<p>Hold onto that sentence. Everything in this lab comes back to it.</p>
+
+<p>You are about to try five things AI does well, and then catch it doing the thing it does badly. By the end you will have a working partnership: what to hand it, what to keep, and how to check what it gives you back.</p>
+
+<div class="exercise">
+  <p class="exercise-label">Exercise 1 of 6</p>
+  <h3>Write things</h3>
+  <p>AI can write for you. Emails, notes, lists, even fixing your spelling.</p>
+  <div class="try"><b>Try it</b>
+  Think of an email you actually need to send this week. Tell the AI who it is for and what you need, and ask it to write a short, friendly draft.</div>
+  <details><summary>What you should see</summary>
+  <p>A complete, polite draft in a few seconds. It will probably be a little too formal, a little too long, and not quite how you talk. That is normal. The draft is the starting point, not the finished thing.</p></details>
+  <div class="try"><b>Push it further</b>
+  Tell it: "Make it sound more like me. Shorter, less formal." Then change one more thing yourself, by hand.</div>
+  <div class="check"><b>Check yourself</b>
+  Read the final version out loud. Does it still sound like you? Notice what you had to change. That gap between its draft and your voice is worth remembering. It shows up in every exercise from here on.</div>
+</div>
+
+<div class="exercise">
+  <p class="exercise-label">Exercise 2 of 6</p>
+  <h3>Help you think</h3>
+  <p>AI can give you lots of ideas, fast. Use it like a brainstorm partner.</p>
+  <div class="try"><b>Try it</b>
+  Pick something real that needs ideas: a meeting agenda, a gift, a name for a project, a way to explain something at work. Ask for ten ideas.</div>
+  <details><summary>What you should see</summary>
+  <p>Ten ideas almost instantly. A few will be obvious. A few will be wrong for reasons the AI could not know. Usually one or two are genuinely worth keeping. That ratio is fine. Ten ideas in ten seconds means the two good ones cost you nothing.</p></details>
+  <div class="try"><b>Push it further</b>
+  Pick your best two. Ask the AI: "Make the case for each of these." See if its reasons match yours.</div>
+  <div class="check"><b>Check yourself</b>
+  Could you defend your two picks to a coworker in one sentence each? If yes, notice what just happened: the AI supplied volume, and you supplied judgment. That split is the whole trick.</div>
+</div>
+
+<div class="exercise">
+  <p class="exercise-label">Exercise 3 of 6</p>
+  <h3>Sum it up</h3>
+  <p>AI can take something long and tell you what it says, in just a few words.</p>
+  <div class="try"><b>Try it</b>
+  Find a long email or article you have already read, so you know what is in it. Paste it in and ask: "Sum this up in 3 sentences."</div>
+  <details><summary>What you should see</summary>
+  <p>Three clean sentences that are mostly right. Read them against what you remember.</p></details>
+  <div class="check"><b>Check yourself</b>
+  Did the summary drop anything you would have kept? It usually drops at least one thing, and it is often the thing that mattered to <em>you</em>: the deadline that affects your team, the name you recognized. The AI does not know what matters to you unless you tell it. Try again with: "Sum this up in 3 sentences. Keep anything about dates or money." Better?</div>
+</div>
+
+<div class="exercise">
+  <p class="exercise-label">Exercise 4 of 6</p>
+  <h3>Answer questions</h3>
+  <p>AI can answer simple questions and big ones. This exercise is about finding out how much to trust the answers, so you are going to grade one.</p>
+  <div class="try"><b>Try it</b>
+  Ask about something you know cold. Your job, your hometown, a hobby you have had for years. Ask a real question, the kind a curious new coworker would ask you.</div>
+  <details><summary>What you should see</summary>
+  <p>A confident, well-organized answer that is mostly right.</p></details>
+  <div class="try"><b>Push it further</b>
+  Grade it like a teacher. Go line by line and mark each claim: right, vague, or wrong.</div>
+  <div class="check"><b>Check yourself</b>
+  Where was it vague? Notice that the vague parts <em>sound</em> exactly as confident as the right parts. Keep that observation. Exercise 6 is built on it.</div>
+</div>
+
+<div class="exercise">
+  <p class="exercise-label">Exercise 5 of 6</p>
+  <h3>Help you plan</h3>
+  <p>Trips. Parties. Big jobs at work. AI can help you map it out.</p>
+  <div class="try"><b>Try it</b>
+  Take a real task that has been sitting on your list and ask for a three-step plan to get it done.</div>
+  <details><summary>What you should see</summary>
+  <p>A sensible plan that a stranger would write. Because that is what it is. Somewhere in it there will be a step that does not fit your actual situation: a resource you do not have, a step you already finished, a person it does not know about.</p></details>
+  <div class="try"><b>Push it further</b>
+  Find that step. Then tell the AI what it did not know: "Step 2 won't work because..." and let it revise.</div>
+  <div class="check"><b>Check yourself</b>
+  How much better did the plan get once you told it about your situation? The AI starts from zero every time. It does not know your job, your team, or your Tuesday. The more you share, the better it helps. You just proved that to yourself.</div>
+</div>
+
+<h2>Now catch it making something up</h2>
+
+<div class="word-card">
+  <p class="quiet" style="margin:0">New word</p>
+  <p class="word" style="margin:0.25rem 0">HALLUCINATION</p>
+  <p class="say" style="margin:0">hə-loo-sə-NAY-shun</p>
+  <p style="margin:0.75rem 0 0">It's when AI tells you something that sounds true... but is not true at all. It might give you a fake fact or a fake name. It does this with a smile, like it is sure. But it is wrong.</p>
+</div>
+
+<div class="exercise">
+  <p class="exercise-label">Exercise 6 of 6 · The important one</p>
+  <h3>Go fishing for a made-up answer</h3>
+  <p>Reading about hallucinations is one thing. Catching one yourself is what makes you careful for good. So go catch one.</p>
+  <div class="try"><b>Try it</b>
+  Ask for specific details about something small that you know completely and the internet barely covers. Your street. A tiny local business. Your niche hobby, at the level only regulars know. Ask for specifics: names, dates, numbers. Be a little unfair. That is the point.</div>
+  <details><summary>What you should see</summary>
+  <p>One of two things. Sometimes the AI admits it does not know, or looks it up and says where it looked. That is the good behavior, and newer tools do it more often. Give it credit, and keep fishing somewhere smaller. Sooner or later you will get the other thing: specific, confident, plausible details that you know are wrong. A founding year. A name. A reason. Delivered in the same steady tone as every true thing it ever told you.</p></details>
+  <div class="check"><b>Check yourself</b>
+  You caught it. Now write one sentence: how did the made-up answer <em>look</em> different from the true ones? Take your time.
+  <p style="margin:0.75rem 0 0">The honest answer is that it didn't. It looked exactly the same. That sentence is the single most useful thing you can know about AI, and now you did not read it somewhere. You saw it.</p></div>
+</div>
+
+<h2>What you just learned, named</h2>
+
+<p>You have now personally run into all four of AI's big weak spots. Here they are with names on them:</p>
+
+<ul>
+  <li><b>It doesn't know what's new.</b> It learned from old books, websites, and stories. If you need fresh facts, double-check with a real source. You saw this if your fishing trip in Exercise 6 asked about anything recent.</li>
+  <li><b>It doesn't know you.</b> It starts from zero every time. Your summary dropped what mattered to you in Exercise 3, and your plan had the stranger-step in Exercise 5, for the same reason. Tell it who you are and what you need.</li>
+  <li><b>It's not always right.</b> Smart-sounding does not mean correct. You graded the vague lines in Exercise 4 and caught the confident wrong answer in Exercise 6.</li>
+  <li><b>It can't feel.</b> It does not have a heart. It sounds like it does because it learned from people who do. Feelings, comfort, and tough talks still belong to humans. There is no exercise for this one, and there should not be.</li>
+</ul>
+
+<h2>Your turn</h2>
+
+<div class="exercise">
+  <p class="exercise-label">Reflection · two minutes, pen and paper is fine</p>
+  <h3>Before this lab, when did AI not work the way you wanted?</h3>
+  <p>Or: when did it give you a result that you knew, or felt, was off? What would you check before trusting a result like that again?</p>
+  <p class="quiet">If you are doing this lab with a group, this is the part to talk about with a partner. The stories are always better out loud.</p>
+</div>
+
+<h2>Better together</h2>
+
+<p>AI + you = a team, and the team has three plays. You already ran all of them today:</p>
+
+<ul>
+  <li><b>AI gives ideas. You pick the good ones.</b> That was Exercise 2.</li>
+  <li><b>AI writes a draft. You fix it.</b> That was Exercise 1. It gets you started fast, then you make it sound like you.</li>
+  <li><b>AI gives an answer. You check it.</b> That was Exercises 4 and 6. Your eyes catch what AI misses.</li>
+</ul>
+
+<p>Notice what is common to all three: the AI goes first, and you go last. That order is the skill. Hand it the blank page, keep the final say.</p>
+
+<p>That's the whole lab. Go use the guess machine.</p>
+
+</main>
+
+<footer>
+  <p>Made by Sahaj Kashyap, an elementary school teacher of fifteen years who now also teaches adults how to work with AI. This lab is the self-paced version of a workshop; the companion slide deck for teaching it live is <a href="Module-1-What-AI-Is.pdf">here</a>.</p>
+  <p>Lab 1 of the AI Skills for Everyone series. It works with any AI chat tool and plays favorites with none.</p>
+</footer>
+
+</body>
+</html>

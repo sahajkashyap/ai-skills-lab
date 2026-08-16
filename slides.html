@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 1 Slides: What AI Is and What It Can't Do · AI Skills for Everyone</title>
+<style>
+  /* ============================================================
+     EDIT ME: every slide is a <section class="slide"> below.
+     Change the text right in the HTML. Arrow keys or the buttons
+     move between slides. Print (Cmd+P) gives one slide per page,
+     which is also how we export the PDF companion deck.
+     ============================================================ */
+  :root {
+    --cream: #faf4e6;
+    --ink: #4a2c17;
+    --rust: #b5541c;
+    --rust-deep: #8f3d10;
+    --gold: #c99a3f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #2b2018;
+    font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--ink);
+  }
+  .slide {
+    display: none;
+    width: min(96vw, 170vh);
+    aspect-ratio: 16 / 9;
+    margin: 2vh auto;
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 4.5% 5.5%;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide.active { display: block; }
+  .kicker {
+    font-size: clamp(0.6rem, 1.4vw, 0.85rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--rust);
+    font-weight: 600;
+    margin: 0 0 1%;
+  }
+  h1 { font-size: clamp(1.8rem, 5.2vw, 4rem); line-height: 1.08; margin: 0 0 2%; font-weight: 700; }
+  h2 { font-size: clamp(1.4rem, 3.8vw, 2.9rem); line-height: 1.12; margin: 0 0 2.5%; font-weight: 700; }
+  p, li { font-size: clamp(0.9rem, 2vw, 1.5rem); line-height: 1.45; margin: 0 0 2%; }
+  .big { font-size: clamp(1.1rem, 2.6vw, 2rem); }
+  .try {
+    background: #f1e3c8;
+    border-left: 6px solid var(--gold);
+    border-radius: 8px;
+    padding: 2% 3%;
+    margin-top: 2.5%;
+  }
+  .try b { display: block; font-size: clamp(0.6rem, 1.3vw, 0.8rem); letter-spacing: 0.14em; text-transform: uppercase; color: var(--rust-deep); margin-bottom: 0.5%; }
+  .art {
+    position: absolute;
+    right: 4%;
+    bottom: 9%;
+    width: 34%;
+    border-radius: 10px;
+  }
+  .art-wide { width: 42%; }
+  .has-art .text-col { width: 58%; }
+  .footer {
+    position: absolute;
+    bottom: 3.5%;
+    left: 5.5%;
+    right: 5.5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(0.55rem, 1.2vw, 0.8rem);
+    color: #9b7b57;
+  }
+  .center { text-align: center; padding-top: 7%; }
+  .center .art { position: static; width: 38%; margin: 2% auto 0; display: block; }
+  .say { color: var(--rust); font-weight: 600; }
+  .word-big { font-size: clamp(2rem, 6vw, 4.5rem); font-weight: 700; margin: 1% 0; }
+  .numlist { list-style: none; padding: 0; }
+  .numlist li { display: flex; align-items: baseline; gap: 0.6em; }
+  .numlist .n {
+    background: var(--rust);
+    color: var(--cream);
+    border-radius: 50%;
+    width: 1.5em; height: 1.5em;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.85em;
+    flex-shrink: 0;
+  }
+  nav {
+    position: fixed;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    background: rgba(0,0,0,0.45);
+    color: #f5ead2;
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    z-index: 10;
+  }
+  nav button {
+    background: none;
+    border: 1px solid #f5ead2;
+    color: #f5ead2;
+    border-radius: 999px;
+    padding: 0.2rem 0.9rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  @media print {
+    body { background: #fff; }
+    nav { display: none; }
+    .slide {
+      display: block !important;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+      page-break-after: always;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 · cover -->
+<section class="slide active center">
+  <p class="kicker">Module 1 of 5 · AI Skills for Everyone</p>
+  <h1>What AI Is<br>and What It Can't Do</h1>
+  <p class="big">A simple start to using AI at work.</p>
+  <img class="art" src="assets/slide01.jpg" alt="A friendly robot waving hello">
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <h2>What is AI?</h2>
+    <p>AI stands for "Artificial Intelligence."</p>
+    <p>That's a big name for a simple idea: <b>AI is a digital companion, a partner you can work with.</b> You can talk to it or type to it. It can answer back.</p>
+    <p>You may have heard of these AI helpers:</p>
+    <p class="say">ChatGPT · Copilot · Gemini · Claude</p>
+  </div>
+  <img class="art" src="assets/slide02.jpg" alt="A robot and a person saying hello to each other">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>2 / 20</span></div>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <h2>How Does AI Learn?</h2>
+    <p class="big">AI learned by reading. <b>A lot.</b></p>
+    <p>It read everything. Books, websites, and stories, more than any person could read in a hundred lives.</p>
+  </div>
+  <img class="art art-wide" src="assets/slide03.jpg" alt="A robot surrounded by stacks of books">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>3 / 20</span></div>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <h2>Here's the Tricky Part…</h2>
+    <p>AI does not really "know" things the way you do.</p>
+    <p>It reads context, and it can usually figure out, pretty accurately, what you are trying to say.</p>
+    <p>But underneath, it is <b>guessing the next word.</b></p>
+    <p class="big say">It is like a super smart guess machine.</p>
+  </div>
+  <img class="art" src="assets/slide04.jpg" alt="A robot thinking hard">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>4 / 20</span></div>
+</section>
+
+<!-- SLIDE 5 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <h2>What Can AI Do Well?</h2>
+    <p>AI is great at lots of jobs. Let's look at five of them, one at a time.</p>
+    <ul class="numlist">
+      <li><span class="n">1</span> Write things</li>
+      <li><span class="n">2</span> Help you think</li>
+      <li><span class="n">3</span> Sum it up</li>
+      <li><span class="n">4</span> Answer questions</li>
+      <li><span class="n">5</span> Help you plan</li>
+    </ul>
+  </div>
+  <img class="art" src="assets/slide05.jpg" alt="A robot juggling a lightbulb, a pencil, a checklist, a document, and a question mark">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>5 / 20</span></div>
+</section>
+
+<!-- SLIDE 6 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Thing 1 of 5 · What can AI do well?</p>
+    <h2>Write things</h2>
+    <p>AI can write for you. Emails, notes, lists, even fixing your spelling.</p>
+    <div class="try"><b>Try asking</b>
+    Think of someone you need to write an email to. Then tell the AI: "Write me a short, friendly email asking for a meeting next week."</div>
+  </div>
+  <img class="art" src="assets/slide06.jpg" alt="A robot typing at a laptop as a paper airplane flies off">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>6 / 20</span></div>
+</section>
+
+<!-- SLIDE 7 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Thing 2 of 5 · What can AI do well?</p>
+    <h2>Help you think</h2>
+    <p>AI can give you lots of ideas, fast. Use it like a brainstorm partner.</p>
+    <div class="try"><b>Try asking</b>
+    "Give me 10 ideas for a fun work party."</div>
+    <div class="try"><b>Then get specific</b>
+    "Include activities everyone can join, non-alcoholic drinks, and vegetarian and vegan food."</div>
+    <p class="say">Your turn. Try it, see what you get, and share with a partner.</p>
+  </div>
+  <img class="art" src="assets/slide07.jpg" alt="A robot with lightbulbs lighting up all around it">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>7 / 20</span></div>
+</section>
+
+<!-- SLIDE 8 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Thing 3 of 5 · What can AI do well?</p>
+    <h2>Sum it up</h2>
+    <p>The details of your work matter, and they deserve a real read. But sometimes you want a summary first, before diving in.</p>
+    <div class="try"><b>Try asking</b>
+    "Sum this up in 3 sentences." (then paste a long article or email)</div>
+    <p class="say">Go ahead, try it now. See what it comes back with.</p>
+  </div>
+  <img class="art" src="assets/slide08.jpg" alt="A robot turning a very long scroll into one small card">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>8 / 20</span></div>
+</section>
+
+<!-- SLIDE 9 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Thing 4 of 5 · What can AI do well?</p>
+    <h2>Answer questions</h2>
+    <p>AI can take a complex question and give you a simple answer. Just remember to check what it says.</p>
+    <div class="try"><b>Try asking</b>
+    Think of a question that is really complex, but where you need a simple answer. For example: "Why is the global birth rate falling? Explain it in four sentences, like I'm twelve."</div>
+  </div>
+  <img class="art" src="assets/slide09.jpg" alt="A robot pointing at a big question mark with a checkmark beside it">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>9 / 20</span></div>
+</section>
+
+<!-- SLIDE 10 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Thing 5 of 5 · What can AI do well?</p>
+    <h2>Help you plan</h2>
+    <p>Trips. Parties. School projects. Big jobs at work. AI can help you map it out.</p>
+    <div class="try"><b>Try asking</b>
+    "Make me a 3-day plan to clean out my office."</div>
+  </div>
+  <img class="art" src="assets/slide10.jpg" alt="A robot laying out a plan">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>10 / 20</span></div>
+</section>
+
+<!-- SLIDE 11 · section break -->
+<section class="slide center">
+  <p class="kicker">We watch out</p>
+  <h1>What is AI<br>not so good at?</h1>
+  <img class="art" src="assets/slide11.jpg" alt="A robot holding up a hand next to a warning sign">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>11 / 20</span></div>
+</section>
+
+<!-- SLIDE 12 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <h2>AI Can Make Stuff Up</h2>
+    <p class="kicker">New word: Hallucination</p>
+    <p class="word-big" style="font-size:clamp(1.3rem,3vw,2.2rem)">hə-loo-sə-NAY-shun</p>
+    <p>It's when AI tells you something that sounds true… but is not true at all.</p>
+    <p>It might give you a fake fact or a fake name. It does this with a smile, like it is sure. But it is wrong.</p>
+  </div>
+  <img class="art" src="assets/slide12.jpg" alt="A robot pointing at an empty speech bubble">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>12 / 20</span></div>
+</section>
+
+<!-- SLIDE 13 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Problem 1 of 4 · Things to watch for</p>
+    <h2>Doesn't know what's new</h2>
+    <p>AI learned from old books, websites, and stories. It may not know what happened last week, or even yesterday.</p>
+    <p>If you need today's news or fresh facts, double-check with a real source.</p>
+  </div>
+  <img class="art" src="assets/slide13.jpg" alt="A puzzled robot reading a newspaper">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>13 / 20</span></div>
+</section>
+
+<!-- SLIDE 14 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Problem 2 of 4 · Things to watch for</p>
+    <h2>Can't feel</h2>
+    <p>AI does not have a heart. It does not really care. It just sounds like it does because it learned from people who do.</p>
+    <p>Feelings, comfort, and tough talks still belong to humans.</p>
+  </div>
+  <img class="art" src="assets/slide14.jpg" alt="A person with a glowing heart standing beside a robot">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>14 / 20</span></div>
+</section>
+
+<!-- SLIDE 15 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Problem 3 of 4 · Things to watch for</p>
+    <h2>Doesn't know you</h2>
+    <p>AI doesn't know your job, your team, your boss, or your customers. It is starting from zero every time.</p>
+    <p>Tell it who you are and what you need. The more you share, the better it helps.</p>
+  </div>
+  <img class="art" src="assets/slide15.jpg" alt="A robot imagining a cloud of vague shapes">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>15 / 20</span></div>
+</section>
+
+<!-- SLIDE 16 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Problem 4 of 4 · Things to watch for</p>
+    <h2>Not always right</h2>
+    <p>Even when AI sounds smart and sure, it can still be wrong. Smart-sounding does not mean correct.</p>
+    <p>Always check its work before you send, share, or save it.</p>
+  </div>
+  <img class="art" src="assets/slide16.jpg" alt="A robot holding a page under a magnifying glass showing an X">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>16 / 20</span></div>
+</section>
+
+<!-- SLIDE 17 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">Turn &amp; Talk</p>
+    <h2>Your turn.</h2>
+    <p>When did AI not work the way you wanted?</p>
+    <p>Or, when did it give you a result that you knew (or felt) was off?</p>
+    <p class="say">Be ready to share with a partner.</p>
+  </div>
+  <img class="art" src="assets/slide17.jpg" alt="Two robots talking to each other">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>17 / 20</span></div>
+</section>
+
+<!-- SLIDE 18 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">How we work with AI · Better together</p>
+    <h2>AI + You = a great team</h2>
+    <p class="big">Way #1 we team up:</p>
+    <p class="big"><b>AI gives ideas. You pick the good ones.</b></p>
+  </div>
+  <img class="art" src="assets/slide18.jpg" alt="A hand picking one lightbulb from a tray a robot is holding">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>18 / 20</span></div>
+</section>
+
+<!-- SLIDE 19 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">How we work with AI</p>
+    <p class="big">Way #2 we team up:</p>
+    <h2>AI writes a draft.<br>You fix it.</h2>
+    <p>AI gets you started fast. Then you make it sound like you.</p>
+  </div>
+  <img class="art" src="assets/slide19.jpg" alt="A robot handing over a page while a human hand edits it with a pencil">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>19 / 20</span></div>
+</section>
+
+<!-- SLIDE 20 -->
+<section class="slide has-art">
+  <div class="text-col">
+    <p class="kicker">How we work with AI</p>
+    <p class="big">Way #3 we team up:</p>
+    <h2>AI gives an answer.<br>You check it.</h2>
+    <p>Your eyes catch what AI misses. Together, the work is stronger.</p>
+  </div>
+  <img class="art" src="assets/slide20.jpg" alt="A person examining a robot's page with a magnifying glass">
+  <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>20 / 20</span></div>
+</section>
+
+<nav>
+  <button id="prev" aria-label="Previous slide">←</button>
+  <span id="counter">1 / 20</span>
+  <button id="next" aria-label="Next slide">→</button>
+</nav>
+
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  let i = 0;
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, k) => s.classList.toggle('active', k === i));
+    document.getElementById('counter').textContent = (i + 1) + ' / ' + slides.length;
+  }
+  document.getElementById('prev').onclick = () => show(i - 1);
+  document.getElementById('next').onclick = () => show(i + 1);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1);
+    if (e.key === 'ArrowLeft') show(i - 1);
+  });
+</script>
+
+</body>
+</html>
