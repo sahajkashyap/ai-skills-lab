@@ -26,10 +26,10 @@
 
   <!-- speech bubble from the first robot -->
   <g transform="translate(300,120)">
-    <path d="M -170 -60 Q -170 -88 -142 -88 L 170 -88 Q 198 -88 198 -60 L 198 4 Q 198 32 170 32 L -60 32 L -96 66 L -86 32 L -142 32 Q -170 32 -170 4 Z"
+    <path d="M -170 -60 Q -170 -88 -142 -88 L -118 -88 L -152 -124 L -98 -88 L 170 -88 Q 198 -88 198 -60 L 198 4 Q 198 32 170 32 L -142 32 Q -170 32 -170 4 Z"
           fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
-    <text x="14" y="-36" text-anchor="middle" font-size="30" font-weight="bold" fill="#8f3d10">"One specific job:</text>
-    <text x="14" y="6" text-anchor="middle" font-size="30" font-weight="bold" fill="#8f3d10">check this."</text>
+    <text x="14" y="-36" text-anchor="middle" font-size="28" font-weight="bold" fill="#8f3d10">You: "One specific job,</text>
+    <text x="14" y="4" text-anchor="middle" font-size="28" font-weight="bold" fill="#8f3d10">check this."</text>
   </g>
 
   <!-- robot 1: handing off the work -->

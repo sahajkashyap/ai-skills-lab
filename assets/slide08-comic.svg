@@ -148,7 +148,7 @@
       <rect x="-46" y="-34" width="92" height="68" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="5"/>
       <path d="M -18 0 L -4 14 L 24 -18" fill="none" stroke="#175e54" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text x="295" y="352" text-anchor="middle" font-size="26" font-weight="bold" letter-spacing="2" fill="#8f3d10">4 · AN AGENT CHECKS THE FACTS</text>
+    <text x="295" y="352" text-anchor="middle" font-size="26" font-weight="bold" letter-spacing="2" fill="#8f3d10">4 · A SECOND AI CHECKS THE FACTS</text>
   </g>
 
   <!-- ===================== PANEL 5 (wide): the person reads it last ===================== -->

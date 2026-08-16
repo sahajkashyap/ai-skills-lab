@@ -48,7 +48,7 @@
   <g transform="translate(492,96) rotate(10) scale(0.8)"><use href="#mini-paper"/></g>
   <line x1="478" y1="112" x2="502" y2="84" stroke="#c98a4b" stroke-width="7" stroke-linecap="round"/>
   <path d="M 502 84 l 8 -9 l -3 12 Z" fill="#8f3d10"/>
-  <text x="450" y="24" text-anchor="middle" font-size="27" font-weight="bold" letter-spacing="2" fill="#8f3d10">1 · YOU WRITE</text>
+  <text x="450" y="24" text-anchor="middle" font-size="27" font-weight="bold" letter-spacing="2" fill="#8f3d10">1 · YOU ASK</text>
 
   <!-- node 2, bottom right: AI drafts -->
   <g transform="translate(650,400)"><use href="#bot-bust"/></g>

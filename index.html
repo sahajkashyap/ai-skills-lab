@@ -138,7 +138,7 @@
   }
   .q { margin: 1rem 0 1.25rem; }
   .q h3 { margin-bottom: 0.5rem; }
-  .q > label { display: block; padding: 0.35rem 0; cursor: pointer; }
+  .q > label { display: block; padding: 0.35rem 0 0.35rem 1.6em; text-indent: -1.6em; cursor: pointer; }
   .q.correct h3::after { content: "  ✓"; color: var(--accent); }
   .q.wrong h3::after { content: "  ✗"; color: #a33; }
   .btn {
@@ -166,9 +166,9 @@
   <p class="kicker">AI Skills for Everyone · Lab 1 of a series</p>
   <h1>What AI Is and What It Can't Do</h1>
   <p class="standfirst">A simple start to using AI at work. Self-paced, no technical background needed.</p>
-  <p class="quiet">You will need this page and an AI chat window open side by side. Claude is the one I use in the examples. ChatGPT, Copilot, or Gemini work just as well. Every exercise here uses your real work, not practice examples. That is on purpose.</p>
+  <p class="quiet">You will need this page and an AI chat window open side by side. Any of the big AI chat tools works: Claude, ChatGPT, Copilot, or Gemini. Every exercise here uses your real work, not practice examples. That is on purpose.</p>
   <div class="rate-box">
-    <p style="margin:0 0 0.5rem"><b>Before you start, one question.</b> How confident are you that you could catch AI being wrong? Be honest, nobody sees this but you.</p>
+    <p style="margin:0 0 0.5rem"><b>Before you start, one question.</b> How confident are you that you could catch AI being wrong? Be honest. Nobody sees this but you.</p>
     <div class="rate-row" id="rate-before">
       <label><input type="radio" name="conf-before" value="1"> 1 · Not at all</label>
       <label><input type="radio" name="conf-before" value="2"> 2</label>
@@ -185,11 +185,13 @@
 
 <p>AI is a digital companion, a partner you can work with. You can talk to it or type to it, and it can answer back.</p>
 
-<p>It learned by reading. A lot. Books, websites, and stories, more than any person could read in a hundred lives. It reads context, and it can usually figure out, pretty accurately, what you are trying to say. But here is the tricky part: AI does not really know things the way you do. Underneath, it is guessing the next word. It is like a super smart guess machine.</p>
+<p>It learned by reading. A lot. Books, websites, and stories, more than any person could read in a hundred lives. It reads context, and it can usually figure out, pretty accurately, what you are trying to say. But here is the tricky part: AI does not really know things the way you do. Underneath, it is guessing the next word. It is like a super-smart guess machine.</p>
 
 <p>Hold onto that sentence. Everything in this lab comes back to it.</p>
 
 <p>You are about to try five things AI does well, and then catch it doing the thing it does badly. By the end you will have a working partnership: what to hand it, what to keep, and how to check what it gives you back.</p>
+
+<h2>Five things AI does well</h2>
 
 <div class="exercise">
   <p class="exercise-label">Exercise 1 of 6</p>
@@ -256,12 +258,12 @@
   <div class="try"><b>Push it further</b>
   Find that step. Then tell the AI what it did not know: "Step 2 won't work because..." and let it revise.</div>
   <div class="check"><b>Check yourself</b>
-  How much better did the plan get once you told it about your situation? The AI starts from zero every time. It does not know your job, your team, or your Tuesday. The more you share, the better it helps. You just proved that to yourself.</div>
+  How much better did the plan get once you told it about your situation? Unless you tell it, the AI starts from zero. It does not know your job, your team, or your Tuesday. The more you share, the better it helps. You just proved that to yourself.</div>
 </div>
 
 <h2>Now catch it making something up</h2>
 
-<p>AI can be 100% confident when it is right, and just as confident when it is wrong. So when do you double-check? Match it to the stakes. The weather or a ball game score, you are probably fine. A research report or a financial analysis deserves sources, links, and a second check.</p>
+<p>AI can be 100% confident when it is right, and just as confident when it is wrong. So when do you double-check? Match it to the stakes. The weather or a ball game score? You are probably fine. A research report or a financial analysis deserves sources, links, and a second check.</p>
 
 <div class="word-card">
   <p class="quiet" style="margin:0">New word</p>
@@ -285,7 +287,8 @@
   <textarea id="nb-caught" class="nb-input" rows="3" placeholder="Paste the AI's confident wrong answer here..."></textarea>
   <label class="nb-label" for="nb-tell">How it looked different from the true answers:</label>
   <textarea id="nb-tell" class="nb-input" rows="2" placeholder="One sentence..."></textarea>
-  <p style="margin:0.75rem 0 0">The honest answer is that it didn't. It looked exactly the same. That sentence is the single most useful thing you can know about AI, and now you did not read it somewhere. You saw it.</p></div>
+  <details style="margin-top:0.75rem"><summary>After you have written your sentence, open this</summary>
+  <p style="margin:0.5rem 0 0">The honest answer is that it didn't. It looked exactly the same. That sentence is the single most useful thing you can know about AI, and you did not just read it somewhere. You saw it.</p></details></div>
 </div>
 
 <h2>What you just learned, named</h2>
@@ -294,8 +297,8 @@
 
 <ul>
   <li><b>It can make stuff up.</b> You caught it doing so in Exercise 6, and you saw the fix: make it show its work. Ask for the sources and the links, especially for anything recent, because what AI learned may be months old.</li>
-  <li><b>It doesn't know you.</b> It starts from zero every time. Your summary dropped what mattered to you in Exercise 3, and your plan had the stranger-step in Exercise 5, for the same reason. The more specific you are, the more precise it can be. Used well, it is more than a vending machine. It is a thinking partner.</li>
-  <li><b>The Silicon Man.</b> It does not have a heart. It uses our words and our language, so it sounds like someone who cares on the other end. When something matters deeply, it can help you write. But your words are more than silicon.</li>
+  <li><b>It doesn't know you.</b> Unless you tell it, it starts from zero every time. Your summary dropped what mattered to you in Exercise 3, and your plan had the stranger-step in Exercise 5, for the same reason. The more specific you are, the more precise it can be. Used well, it is more than a vending machine. It is a thinking partner.</li>
+  <li><b>It doesn't have a heart.</b> The slide deck calls this one the Silicon Man: it uses our words and our language, so it sounds like someone who cares on the other end. When something matters deeply, it can help you draft. But the words that reach the other person should be yours.</li>
   <li><b>You're responsible.</b> When a mistake goes out at work, the person who signed off on it owns it. With AI, the one who signs off is you. When in doubt: read your own work, and ask a fresh AI, one that has never seen the work, to fact-check it and report back.</li>
 </ul>
 
@@ -315,10 +318,10 @@
 <ul>
   <li><b>You ask for ideas. AI gives you plenty. You pick the good ones.</b> That was Exercise 2.</li>
   <li><b>You share your voice and your ideas. AI drafts. You fix it.</b> That was Exercise 1. It gets you started fast, then you make it sound like you.</li>
-  <li><b>You set the question. AI answers. An agent you direct checks it. You read it last.</b> That was Exercises 4 and 6. Your eyes catch what AI misses.</li>
+  <li><b>You set the question. AI answers. You check it.</b> That was Exercises 4 and 6, line by line. For the big stuff, add a second AI that you direct, an agent, as a checker before your final read. Your eyes catch what AI misses.</li>
 </ul>
 
-<p>Here is the whole partnership in one picture. AI can build rungs all day, fast and without tiring. But a ladder cannot decide which wall to lean on. You place the ladder. You point it at the work that matters. And when the climbing is done, the final say is yours.</p>
+<p>Here is the whole partnership in one picture you can keep in your head. AI can build rungs all day, fast and without tiring. But a ladder cannot decide which wall to lean on. You place the ladder. You point it at the work that matters. And when the climbing is done, the final say is yours.</p>
 
 <h2>Show what you learned</h2>
 
@@ -345,7 +348,7 @@
     <h3>3. What is the order that makes the AI-and-you team work?</h3>
     <label><input type="radio" name="q3" value="a"> a) You hand AI the task and use whatever it gives back</label>
     <label><input type="radio" name="q3" value="b"> b) AI does the work, then AI double-checks its own work</label>
-    <label><input type="radio" name="q3" value="c"> c) You direct AI and work with it. An agent checks it. Then you check it yourself.</label>
+    <label><input type="radio" name="q3" value="c"> c) You direct AI and work with it. A second AI checks it. Then you check it yourself.</label>
   </div>
 
   <p class="exercise-label" style="margin-top:1.5rem">Part 2 · Say it in your own words</p>
@@ -396,7 +399,7 @@
 <footer>
   <p>Made by Sahaj Kashyap, an elementary school teacher of fifteen years who now also teaches adults how to work with AI. This lab is the self-paced version of a workshop; the companion slide deck for teaching it live is <a href="slides.html">here</a>.</p>
   <p>Lab 1 of the AI Skills for Everyone series. It works with any AI chat tool and plays favorites with none.</p>
-  <p>A note on how this measures learning: the assessment above checks whether you caught a hallucination and can make the specificity move yourself, not whether you scrolled to the bottom. And a note on how it was made: written by a teacher, produced with AI assistance, from the illustrations to the build of this page, with every word reviewed by the person whose name is on it.</p>
+  <p>A note on how this measures learning: the assessment above checks whether you caught a hallucination and can make the specificity move yourself, not whether you scrolled to the bottom. And a note on how it was made: written by a teacher, produced with AI assistance, from the slide deck's illustrations to the build of this page, with every word reviewed by the person whose name is on it.</p>
 </footer>
 
 <script>
@@ -414,6 +417,20 @@
     if (recall('conf-before') === r.value) r.checked = true;
     r.addEventListener('change', () => store('conf-before', r.value));
   });
+  document.querySelectorAll('input[name="conf-after"]').forEach(r => {
+    if (recall('conf-after') === r.value) r.checked = true;
+    r.addEventListener('change', () => store('conf-after', r.value));
+  });
+  const picked = name => {
+    const el = document.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  };
+  const confText = () => {
+    const b = picked('conf-before'), a = picked('conf-after');
+    return (b && a)
+      ? `Confidence in catching AI being wrong: ${b} out of 5 before the lab, ${a} out of 5 after.`
+      : '';
+  };
 
   $('score-btn').addEventListener('click', () => {
     const qs = document.querySelectorAll('.q[data-answer]');
@@ -426,13 +443,8 @@
     });
     const pct = Math.round(100 * right / qs.length);
     $('score-line').textContent = `Part 1: ${right} of ${qs.length} (${pct}%)`;
-    const before = recall('conf-before');
-    const afterEl = document.querySelector('input[name="conf-after"]:checked');
-    const after = afterEl ? afterEl.value : '';
-    if (after) store('conf-after', after);
-    $('conf-line').textContent = (before && after)
-      ? `Confidence in catching AI being wrong: ${before} out of 5 before the lab, ${after} out of 5 after.`
-      : 'Tip: answer the confidence question at the top of the page and in Part 4 to see your before-and-after.';
+    $('conf-line').textContent = confText() ||
+      'Tip: answer the confidence question at the top of the page and in Part 4 to see your before-and-after.';
     $('results').hidden = false;
     $('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
@@ -442,13 +454,13 @@
       'AI Skills for Everyone - Lab 1: my results',
       '',
       $('score-line').textContent,
-      $('conf-line').textContent,
+      confText() || 'Confidence before/after: (not recorded)',
       '',
       'The hallucination I caught (Exercise 6):',
-      recall('nb-caught') || '(not recorded)',
+      $('nb-caught').value || '(not recorded)',
       '',
       'How it looked different from the true answers:',
-      recall('nb-tell') || '(not recorded)',
+      $('nb-tell').value || '(not recorded)',
       '',
       'What I would say to a confident answer about something important:',
       $('a4').value || '(not recorded)',
