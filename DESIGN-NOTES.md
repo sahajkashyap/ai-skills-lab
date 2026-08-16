@@ -109,8 +109,12 @@ tools: a checker that has seen the work made is grading its own homework.
 shows three ticked boxes: AI gives an answer, a second AI checks it, you
 read it yourself.
 
-**Why:** The order is the skill: AI goes first, you go last. A checklist is
-the visual form of a habit, and habits are what this module is for.
+**Why:** A checklist is the visual form of a habit, and habits are what this
+module is for. A late revision changed the order's framing: the checklist now
+begins with "you set the task," because the earlier "AI goes first" phrasing
+undersold the truth that the human's input shapes everything downstream. The
+partnership reads: you direct, AI produces, an agent you direct checks, you
+read it last. A ladder cannot decide which wall to lean on.
 
 ## Register: warmth kept, phonics cut
 
