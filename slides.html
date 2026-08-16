@@ -37,6 +37,20 @@
     overflow: hidden;
   }
   .slide.active { display: block; }
+  .slide.active.has-art {
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    padding-bottom: 7%;
+  }
+  .has-art .text-col { width: 58%; flex-shrink: 0; }
+  .has-art .art {
+    position: static;
+    width: 36%;
+    max-height: 78%;
+    object-fit: contain;
+  }
+  .has-art .art-wide { width: 40%; }
   .kicker {
     font-size: clamp(0.6rem, 1.4vw, 0.85rem);
     letter-spacing: 0.16em;
@@ -434,6 +448,9 @@
     if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1);
     if (e.key === 'ArrowLeft') show(i - 1);
   });
+  // #12 in the URL jumps straight to slide 12
+  const h = parseInt(location.hash.slice(1), 10);
+  if (h >= 1 && h <= slides.length) show(h - 1);
 </script>
 
 </body>
