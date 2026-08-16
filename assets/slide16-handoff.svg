@@ -15,6 +15,18 @@
       <rect x="-38" y="56" width="24" height="34" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
       <rect x="14" y="56" width="24" height="34" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
     </g>
+    <g id="human16">
+      <path d="M -42 44 Q -42 18 -16 16 L 16 16 Q 42 18 42 44 L 42 52 L -42 52 Z" fill="#2f6b5e" stroke="#4a2c17" stroke-width="4"/>
+      <rect x="-8" y="2" width="16" height="16" rx="6" fill="#eebd93" stroke="#4a2c17" stroke-width="3"/>
+      <circle cx="-30" cy="-22" r="7" fill="#eebd93" stroke="#4a2c17" stroke-width="3"/>
+      <circle cx="30" cy="-22" r="7" fill="#eebd93" stroke="#4a2c17" stroke-width="3"/>
+      <circle cx="0" cy="-22" r="30" fill="#eebd93" stroke="#4a2c17" stroke-width="4"/>
+      <path d="M -30 -30 Q -31 -52 0 -52 Q 31 -52 30 -30 Q 18 -42 5 -41 Q -10 -42 -30 -30 Z"
+            fill="#5b3a1e" stroke="#4a2c17" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="-11" cy="-23" r="3.5" fill="#4a2c17"/>
+      <circle cx="11" cy="-23" r="3.5" fill="#4a2c17"/>
+      <path d="M -8 -8 Q 0 -3 8 -8" fill="none" stroke="#4a2c17" stroke-width="3" stroke-linecap="round"/>
+    </g>
     <g id="paper16">
       <rect x="-34" y="-46" width="68" height="92" rx="6" fill="#fffdf7" stroke="#8f3d10" stroke-width="5"/>
       <line x1="-20" y1="-26" x2="20" y2="-26" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
@@ -24,11 +36,15 @@
     </g>
   </defs>
 
-  <!-- speech bubble from the first robot -->
-  <g transform="translate(300,120)">
-    <path d="M -170 -60 Q -170 -88 -142 -88 L -118 -88 L -152 -124 L -98 -88 L 170 -88 Q 198 -88 198 -60 L 198 4 Q 198 32 170 32 L -142 32 Q -170 32 -170 4 Z"
+  <!-- the person speaking, top left -->
+  <g transform="translate(96,160) scale(1.15)">
+    <use href="#human16"/>
+  </g>
+  <!-- speech bubble, tail pointing at the person -->
+  <g transform="translate(390,110)">
+    <path d="M -170 -60 Q -170 -88 -142 -88 L 170 -88 Q 198 -88 198 -60 L 198 4 Q 198 32 170 32 L -142 32 Q -170 32 -170 4 L -170 -6 L -218 -18 L -170 -34 Z"
           fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
-    <text x="14" y="-36" text-anchor="middle" font-size="28" font-weight="bold" fill="#8f3d10">You: "One specific job,</text>
+    <text x="14" y="-36" text-anchor="middle" font-size="28" font-weight="bold" fill="#8f3d10">"One specific job,</text>
     <text x="14" y="4" text-anchor="middle" font-size="28" font-weight="bold" fill="#8f3d10">check this."</text>
   </g>
 
