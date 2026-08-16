@@ -113,6 +113,47 @@
     font-size: 0.95rem;
   }
   footer a { color: var(--accent); }
+  .rate-box {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0 0.5rem;
+    font-size: 0.98rem;
+  }
+  .rate-row { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; font-family: Helvetica, Arial, sans-serif; font-size: 0.88rem; }
+  .rate-row label { display: inline-flex; align-items: center; gap: 0.35em; cursor: pointer; }
+  .nb-label { display: block; font-family: Helvetica, Arial, sans-serif; font-size: 0.8rem; color: var(--soft); margin: 0.75rem 0 0.25rem; }
+  .nb-input {
+    width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    resize: vertical;
+    box-sizing: border-box;
+  }
+  .q { margin: 1rem 0 1.25rem; }
+  .q h3 { margin-bottom: 0.5rem; }
+  .q > label { display: block; padding: 0.35rem 0; cursor: pointer; }
+  .q.correct h3::after { content: "  ✓"; color: var(--accent); }
+  .q.wrong h3::after { content: "  ✗"; color: #a33; }
+  .btn {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.65rem 1.5rem;
+    cursor: pointer;
+    margin-top: 0.75rem;
+  }
+  .btn-quiet { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
+  #results h3 { font-size: 1.35rem; }
   @media print {
     body { background: #fff; }
     .exercise, .word-card { border: 1px solid #bbb; }
@@ -126,6 +167,16 @@
   <h1>What AI Is and What It Can't Do</h1>
   <p class="standfirst">A simple start to using AI at work. Self-paced, about 45 minutes, no technical background needed.</p>
   <p class="quiet">You will need this page and an AI chat window open side by side. Claude is the one I use in the examples. ChatGPT, Copilot, or Gemini work just as well. Every exercise here uses your real work, not practice examples. That is on purpose.</p>
+  <div class="rate-box">
+    <p style="margin:0 0 0.5rem"><b>Before you start, one question.</b> How confident are you that you could catch AI being wrong? Be honest, nobody sees this but you.</p>
+    <div class="rate-row" id="rate-before">
+      <label><input type="radio" name="conf-before" value="1"> 1 · Not at all</label>
+      <label><input type="radio" name="conf-before" value="2"> 2</label>
+      <label><input type="radio" name="conf-before" value="3"> 3 · Somewhat</label>
+      <label><input type="radio" name="conf-before" value="4"> 4</label>
+      <label><input type="radio" name="conf-before" value="5"> 5 · Very</label>
+    </div>
+  </div>
 </header>
 
 <main>
@@ -210,11 +261,12 @@
 
 <h2>Now catch it making something up</h2>
 
+<p>AI can be 100% confident when it is right, and just as confident when it is wrong. So when do you double-check? Match it to the stakes. The weather or a ball game score, you are probably fine. A research report or a financial analysis deserves sources, links, and a second check.</p>
+
 <div class="word-card">
   <p class="quiet" style="margin:0">New word</p>
   <p class="word" style="margin:0.25rem 0">HALLUCINATION</p>
-  <p class="say" style="margin:0">hə-loo-sə-NAY-shun</p>
-  <p style="margin:0.75rem 0 0">It's when AI tells you something that sounds true... but is not true at all. It might give you a fake fact or a fake name. It does this with a smile, like it is sure. But it is wrong.</p>
+  <p style="margin:0.75rem 0 0">When AI tells you something that sounds true... but is not true at all. A fake fact or a fake name, delivered as confidently as every true thing it has ever told you.</p>
 </div>
 
 <div class="exercise">
@@ -225,20 +277,26 @@
   Ask for specific details about something small that you know completely and the internet barely covers. Your street. A tiny local business. Your niche hobby, at the level only regulars know. Ask for specifics: names, dates, numbers. Be a little unfair. That is the point.</div>
   <details><summary>What you should see</summary>
   <p>One of two things. Sometimes the AI admits it does not know, or looks it up and says where it looked. That is the good behavior, and newer tools do it more often. Give it credit, and keep fishing somewhere smaller. Sooner or later you will get the other thing: specific, confident, plausible details that you know are wrong. A founding year. A name. A reason. Delivered in the same steady tone as every true thing it ever told you.</p></details>
+  <div class="try"><b>Push it further</b>
+  Once you catch one, make the AI show its work: "Send me the links to your sources, so I can verify this myself." Especially for anything recent. What AI learned may be months old.</div>
   <div class="check"><b>Check yourself</b>
-  You caught it. Now write one sentence: how did the made-up answer <em>look</em> different from the true ones? Take your time.
+  You caught it. Write it down in your lab notebook below: paste the made-up answer, then write one sentence on how it <em>looked</em> different from the true ones. Take your time.
+  <label class="nb-label" for="nb-caught">The made-up answer I caught (paste it):</label>
+  <textarea id="nb-caught" class="nb-input" rows="3" placeholder="Paste the AI's confident wrong answer here..."></textarea>
+  <label class="nb-label" for="nb-tell">How it looked different from the true answers:</label>
+  <textarea id="nb-tell" class="nb-input" rows="2" placeholder="One sentence..."></textarea>
   <p style="margin:0.75rem 0 0">The honest answer is that it didn't. It looked exactly the same. That sentence is the single most useful thing you can know about AI, and now you did not read it somewhere. You saw it.</p></div>
 </div>
 
 <h2>What you just learned, named</h2>
 
-<p>You have now personally run into all four of AI's big weak spots. Here they are with names on them:</p>
+<p>You have now personally run into AI's big weak spots. Here they are with names on them:</p>
 
 <ul>
-  <li><b>It doesn't know what's new.</b> It learned from old books, websites, and stories. If you need fresh facts, double-check with a real source. You saw this if your fishing trip in Exercise 6 asked about anything recent.</li>
-  <li><b>It doesn't know you.</b> It starts from zero every time. Your summary dropped what mattered to you in Exercise 3, and your plan had the stranger-step in Exercise 5, for the same reason. Tell it who you are and what you need.</li>
-  <li><b>It's not always right.</b> Smart-sounding does not mean correct. You graded the vague lines in Exercise 4 and caught the confident wrong answer in Exercise 6.</li>
-  <li><b>It can't feel.</b> It does not have a heart. It sounds like it does because it learned from people who do. Feelings, comfort, and tough talks still belong to humans. There is no exercise for this one, and there should not be.</li>
+  <li><b>It can make stuff up.</b> You caught it doing so in Exercise 6, and you saw the fix: make it show its work. Ask for the sources and the links, especially for anything recent, because what AI learned may be months old.</li>
+  <li><b>It doesn't know you.</b> It starts from zero every time. Your summary dropped what mattered to you in Exercise 3, and your plan had the stranger-step in Exercise 5, for the same reason. The more specific you are, the more precise it can be. Used well, it is more than a vending machine. It is a thinking partner.</li>
+  <li><b>The Tin Man.</b> It does not have a heart. It uses our words and our language, so it sounds like someone who cares on the other end. When something matters deeply, it can help you write. But your words are more than silicon.</li>
+  <li><b>You're responsible.</b> When a mistake goes out at work, the person who signed off on it owns it. With AI, the one who signs off is you. When in doubt: read your own work, and ask a fresh AI, one that has never seen the work, to fact-check it and report back.</li>
 </ul>
 
 <h2>Your turn</h2>
@@ -257,19 +315,153 @@
 <ul>
   <li><b>AI gives ideas. You pick the good ones.</b> That was Exercise 2.</li>
   <li><b>AI writes a draft. You fix it.</b> That was Exercise 1. It gets you started fast, then you make it sound like you.</li>
-  <li><b>AI gives an answer. You check it.</b> That was Exercises 4 and 6. Your eyes catch what AI misses.</li>
+  <li><b>AI gives an answer. You check it.</b> That was Exercises 4 and 6. For the big stuff, have a second AI check it first, one that has never seen the work. Then read it yourself. Your eyes catch what AI misses.</li>
 </ul>
 
 <p>Notice what is common to all three: the AI goes first, and you go last. That order is the skill. Hand it the blank page, keep the final say.</p>
+
+<h2>Show what you learned</h2>
+
+<p>Ten minutes, and it works like the lab did: a few questions, then you do the real thing one more time. Your score appears instantly, and nothing leaves this page unless you download it.</p>
+
+<div class="exercise" id="assessment">
+  <p class="exercise-label">Part 1 · Three quick questions</p>
+
+  <div class="q" data-answer="b">
+    <h3>1. When AI gives a wrong answer, how does it usually sound?</h3>
+    <label><input type="radio" name="q1" value="a"> a) Less confident than usual, so you can tell</label>
+    <label><input type="radio" name="q1" value="b"> b) Exactly as confident as when it is right</label>
+    <label><input type="radio" name="q1" value="c"> c) It warns you it might be wrong</label>
+  </div>
+
+  <div class="q" data-answer="c">
+    <h3>2. Which of these should you double-check before using?</h3>
+    <label><input type="radio" name="q2" value="a"> a) Last night's ball game score</label>
+    <label><input type="radio" name="q2" value="b"> b) A fun fact in a casual chat</label>
+    <label><input type="radio" name="q2" value="c"> c) A number going into a report your boss will sign off on</label>
+  </div>
+
+  <div class="q" data-answer="b">
+    <h3>3. What is the order that makes the AI-and-you team work?</h3>
+    <label><input type="radio" name="q3" value="a"> a) You write everything first, then AI approves it</label>
+    <label><input type="radio" name="q3" value="b"> b) AI goes first, you go last</label>
+    <label><input type="radio" name="q3" value="c"> c) AI goes first and last, to save you time</label>
+  </div>
+
+  <p class="exercise-label" style="margin-top:1.5rem">Part 2 · Say it in your own words</p>
+  <div class="q">
+    <h3>4. AI just gave you a confident answer about something important. Write the exact words you would say to it next.</h3>
+    <textarea id="a4" class="nb-input" rows="2" placeholder="Type what you would actually say..."></textarea>
+  </div>
+
+  <p class="exercise-label" style="margin-top:1.5rem">Part 3 · The move you practiced all lab</p>
+  <div class="q">
+    <h3>5. Take a real task from your week. Write the short ask, then the specific ask.</h3>
+    <label class="nb-label" for="a5short">Your short ask:</label>
+    <textarea id="a5short" class="nb-input" rows="2" placeholder='Like: "Plan my week."'></textarea>
+    <label class="nb-label" for="a5spec">Your specific ask, with the details only you know:</label>
+    <textarea id="a5spec" class="nb-input" rows="3" placeholder='Like: "Plan my week. The report is due Thursday, I have school pickup at 3, and Monday is already gone."'></textarea>
+  </div>
+
+  <p class="exercise-label" style="margin-top:1.5rem">Part 4 · One more time</p>
+  <div class="q">
+    <h3>6. Now, after the lab: how confident are you that you could catch AI being wrong?</h3>
+    <div class="rate-row" id="rate-after">
+      <label><input type="radio" name="conf-after" value="1"> 1 · Not at all</label>
+      <label><input type="radio" name="conf-after" value="2"> 2</label>
+      <label><input type="radio" name="conf-after" value="3"> 3 · Somewhat</label>
+      <label><input type="radio" name="conf-after" value="4"> 4</label>
+      <label><input type="radio" name="conf-after" value="5"> 5 · Very</label>
+    </div>
+  </div>
+
+  <button id="score-btn" class="btn">See my results</button>
+
+  <div id="results" hidden>
+    <h3 id="score-line"></h3>
+    <p id="conf-line"></p>
+    <div class="check"><b>Compare your answer to question 4</b>
+    The move is to make it show its work. Any version of: "Send me the links to your sources, so I can verify this myself." If you wrote something in that family, count it right.</div>
+    <p class="quiet">Your notebook entry from Exercise 6 is included in the download.</p>
+    <button id="download-btn" class="btn btn-quiet">Download my results</button>
+  </div>
+</div>
 
 <p>That's the whole lab. Go use the guess machine.</p>
 
 </main>
 
 <footer>
-  <p>Made by Sahaj Kashyap, an elementary school teacher of fifteen years who now also teaches adults how to work with AI. This lab is the self-paced version of a workshop; the companion slide deck for teaching it live is <a href="Module-1-What-AI-Is.pdf">here</a>.</p>
+  <p>Made by Sahaj Kashyap, an elementary school teacher of fifteen years who now also teaches adults how to work with AI. This lab is the self-paced version of a workshop; the companion slide deck for teaching it live is <a href="slides.html">here</a>.</p>
   <p>Lab 1 of the AI Skills for Everyone series. It works with any AI chat tool and plays favorites with none.</p>
+  <p>A note on how this measures learning: the assessment above checks whether you caught a hallucination and can make the specificity move yourself, not whether you scrolled to the bottom. And a note on how it was made: written by a teacher, produced with AI assistance, from the illustrations to the build of this page, with every word reviewed by the person whose name is on it.</p>
 </footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const store = (k, v) => { try { localStorage.setItem('lab1-' + k, v); } catch (e) {} };
+  const recall = k => { try { return localStorage.getItem('lab1-' + k) || ''; } catch (e) { return ''; } };
+
+  // remember typed work as they go
+  ['nb-caught', 'nb-tell', 'a4', 'a5short', 'a5spec'].forEach(id => {
+    const el = $(id);
+    el.value = recall(id);
+    el.addEventListener('input', () => store(id, el.value));
+  });
+  document.querySelectorAll('input[name="conf-before"]').forEach(r => {
+    if (recall('conf-before') === r.value) r.checked = true;
+    r.addEventListener('change', () => store('conf-before', r.value));
+  });
+
+  $('score-btn').addEventListener('click', () => {
+    const qs = document.querySelectorAll('.q[data-answer]');
+    let right = 0;
+    qs.forEach(q => {
+      const picked = q.querySelector('input:checked');
+      q.classList.remove('correct', 'wrong');
+      if (picked && picked.value === q.dataset.answer) { right++; q.classList.add('correct'); }
+      else q.classList.add('wrong');
+    });
+    const pct = Math.round(100 * right / qs.length);
+    $('score-line').textContent = `Part 1: ${right} of ${qs.length} (${pct}%)`;
+    const before = recall('conf-before');
+    const afterEl = document.querySelector('input[name="conf-after"]:checked');
+    const after = afterEl ? afterEl.value : '';
+    if (after) store('conf-after', after);
+    $('conf-line').textContent = (before && after)
+      ? `Confidence in catching AI being wrong: ${before} out of 5 before the lab, ${after} out of 5 after.`
+      : 'Tip: answer the confidence question at the top of the page and in Part 4 to see your before-and-after.';
+    $('results').hidden = false;
+    $('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  $('download-btn').addEventListener('click', () => {
+    const lines = [
+      'AI Skills for Everyone - Lab 1: my results',
+      '',
+      $('score-line').textContent,
+      $('conf-line').textContent,
+      '',
+      'The hallucination I caught (Exercise 6):',
+      recall('nb-caught') || '(not recorded)',
+      '',
+      'How it looked different from the true answers:',
+      recall('nb-tell') || '(not recorded)',
+      '',
+      'What I would say to a confident answer about something important:',
+      $('a4').value || '(not recorded)',
+      '',
+      'My short ask:  ' + ($('a5short').value || '(not recorded)'),
+      'My specific ask:  ' + ($('a5spec').value || '(not recorded)'),
+    ];
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'lab1-results.txt';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+</script>
 
 </body>
 </html>
