@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1010" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <g id="human-bust">
+      <path d="M -42 44 Q -42 18 -16 16 L 16 16 Q 42 18 42 44 L 42 52 L -42 52 Z" fill="#2f6b5e" stroke="#4a2c17" stroke-width="4"/>
+      <rect x="-8" y="2" width="16" height="16" rx="6" fill="#eebd93" stroke="#4a2c17" stroke-width="3"/>
+      <circle cx="-30" cy="-22" r="7" fill="#eebd93" stroke="#4a2c17" stroke-width="3"/>
+      <circle cx="30" cy="-22" r="7" fill="#eebd93" stroke="#4a2c17" stroke-width="3"/>
+      <circle cx="0" cy="-22" r="30" fill="#eebd93" stroke="#4a2c17" stroke-width="4"/>
+      <path d="M -30 -30 Q -31 -52 0 -52 Q 31 -52 30 -30 Q 18 -42 5 -41 Q -10 -42 -30 -30 Z"
+            fill="#5b3a1e" stroke="#4a2c17" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="-11" cy="-23" r="3.5" fill="#4a2c17"/>
+      <circle cx="11" cy="-23" r="3.5" fill="#4a2c17"/>
+      <path d="M -8 -8 Q 0 -3 8 -8" fill="none" stroke="#4a2c17" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g id="bot-bust">
+      <line x1="-16" y1="-46" x2="-22" y2="-62" stroke="#8f3d10" stroke-width="5" stroke-linecap="round"/>
+      <line x1="16" y1="-46" x2="22" y2="-62" stroke="#8f3d10" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="-24" cy="-66" r="6" fill="#c98a4b" stroke="#8f3d10" stroke-width="4"/>
+      <circle cx="24" cy="-66" r="6" fill="#c98a4b" stroke="#8f3d10" stroke-width="4"/>
+      <rect x="-52" y="-38" width="10" height="22" rx="5" fill="#c98a4b" stroke="#8f3d10" stroke-width="4"/>
+      <rect x="42" y="-38" width="10" height="22" rx="5" fill="#c98a4b" stroke="#8f3d10" stroke-width="4"/>
+      <rect x="-42" y="-50" width="84" height="60" rx="12" fill="#b5541c"/>
+      <rect x="-33" y="-42" width="66" height="44" rx="8" fill="#fffdf7"/>
+      <circle cx="-13" cy="-24" r="4.5" fill="#4a2c17"/>
+      <circle cx="13" cy="-24" r="4.5" fill="#4a2c17"/>
+      <path d="M -8 -12 Q 0 -6 8 -12" fill="none" stroke="#4a2c17" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M -34 42 Q -34 14 -12 12 L 12 12 Q 34 14 34 42 L 34 52 L -34 52 Z" fill="#fffdf7" stroke="#8f3d10" stroke-width="4"/>
+    </g>
+    <g id="mini-paper">
+      <rect x="-22" y="-30" width="44" height="60" rx="5" fill="#fffdf7" stroke="#8f3d10" stroke-width="4"/>
+      <line x1="-12" y1="-16" x2="12" y2="-16" stroke="#c98a4b" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-12" y1="-4" x2="12" y2="-4" stroke="#c98a4b" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-12" y1="8" x2="6" y2="8" stroke="#c98a4b" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- ================= THE CYCLE (recycling-style, three arrows) ================= -->
+  <!-- arcs, clockwise -->
+  <path d="M 510 146 A 165 165 0 0 1 613 328" fill="none" stroke="#b5541c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 613 328 l -14 -20 m 14 20 l -24 2" fill="none" stroke="#b5541c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 556 440 A 165 165 0 0 1 344 440" fill="none" stroke="#b5541c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 344 440 l 24 -2 m -24 2 l 20 14" fill="none" stroke="#b5541c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 287 328 A 165 165 0 0 1 390 146" fill="none" stroke="#b5541c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 390 146 l -22 10 m 22 -10 l -10 22" fill="none" stroke="#b5541c" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- node 1, top: you write -->
+  <g transform="translate(430,100)"><use href="#human-bust"/></g>
+  <g transform="translate(492,96) rotate(10) scale(0.8)"><use href="#mini-paper"/></g>
+  <line x1="478" y1="112" x2="502" y2="84" stroke="#c98a4b" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 502 84 l 8 -9 l -3 12 Z" fill="#8f3d10"/>
+  <text x="450" y="24" text-anchor="middle" font-size="27" font-weight="bold" letter-spacing="2" fill="#8f3d10">1 · YOU WRITE</text>
+
+  <!-- node 2, bottom right: AI drafts -->
+  <g transform="translate(650,400)"><use href="#bot-bust"/></g>
+  <g transform="translate(716,412) rotate(8) scale(0.9)"><use href="#mini-paper"/></g>
+  <text x="678" y="510" text-anchor="middle" font-size="27" font-weight="bold" letter-spacing="2" fill="#8f3d10">2 · AI DRAFTS</text>
+
+  <!-- node 3, bottom left: you guide it -->
+  <g transform="translate(250,400)"><use href="#human-bust"/></g>
+  <g transform="translate(322,368)">
+    <path d="M -34 -26 Q -34 -44 -16 -44 L 34 -44 Q 52 -44 52 -26 L 52 -6 Q 52 12 34 12 L 6 12 L -12 30 L -6 12 L -16 12 Q -34 12 -34 -6 Z"
+          fill="#fffdf7" stroke="#8f3d10" stroke-width="5"/>
+    <line x1="-16" y1="-26" x2="34" y2="-26" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-16" y1="-10" x2="24" y2="-10" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="240" y="510" text-anchor="middle" font-size="27" font-weight="bold" letter-spacing="2" fill="#8f3d10">3 · YOU GUIDE IT</text>
+
+  <!-- and around again -->
+  <text x="450" y="316" text-anchor="middle" font-size="24" font-weight="bold" letter-spacing="2" fill="#c98a4b">AND AROUND</text>
+  <text x="450" y="346" text-anchor="middle" font-size="24" font-weight="bold" letter-spacing="2" fill="#c98a4b">AGAIN</text>
+
+  <!-- ================= THE HANDSHAKE ================= -->
+  <g transform="translate(0,560)">
+    <!-- human arm from the left -->
+    <rect x="90" y="212" width="230" height="56" rx="26" fill="#2f6b5e" stroke="#4a2c17" stroke-width="6"/>
+    <path d="M 316 240 L 396 240" stroke="#eebd93" stroke-width="44" stroke-linecap="round"/>
+    <!-- robot arm from the right -->
+    <rect x="580" y="212" width="230" height="56" rx="26" fill="#e9b458" stroke="#8f3d10" stroke-width="6"/>
+    <circle cx="580" cy="240" r="16" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+    <path d="M 504 240 L 584 240" stroke="#e9b458" stroke-width="44" stroke-linecap="round"/>
+    <!-- the clasp: human hand gripping, robot fingers over it, thumbs interlocked -->
+    <rect x="386" y="210" width="120" height="62" rx="28" fill="#eebd93" stroke="#4a2c17" stroke-width="6"/>
+    <ellipse cx="416" cy="204" rx="20" ry="14" transform="rotate(-24 416 204)" fill="#eebd93" stroke="#4a2c17" stroke-width="5"/>
+    <ellipse cx="482" cy="206" rx="19" ry="13" transform="rotate(20 482 206)" fill="#e9b458" stroke="#8f3d10" stroke-width="5"/>
+    <path d="M 442 226 Q 500 222 508 232" fill="none" stroke="#e9b458" stroke-width="13" stroke-linecap="round"/>
+    <path d="M 444 244 Q 502 240 510 248" fill="none" stroke="#e9b458" stroke-width="13" stroke-linecap="round"/>
+    <path d="M 446 262 Q 500 258 506 264" fill="none" stroke="#e9b458" stroke-width="13" stroke-linecap="round"/>
+    <!-- shake lines -->
+    <path d="M 430 186 L 442 170 M 460 182 L 464 164 M 490 186 L 482 168" stroke="#c98a4b" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 430 294 L 442 310 M 460 298 L 464 316 M 490 294 L 482 312" stroke="#c98a4b" stroke-width="6" stroke-linecap="round"/>
+    <text x="450" y="392" text-anchor="middle" font-size="27" font-weight="bold" letter-spacing="2" fill="#8f3d10">A REAL PARTNERSHIP</text>
+  </g>
+</svg>
