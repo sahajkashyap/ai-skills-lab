@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 640" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <g id="bot16">
+      <line x1="-28" y1="-118" x2="-38" y2="-148" stroke="#8f3d10" stroke-width="7" stroke-linecap="round"/>
+      <line x1="28" y1="-118" x2="38" y2="-148" stroke="#8f3d10" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="-40" cy="-152" r="9" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+      <circle cx="40" cy="-152" r="9" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+      <rect x="-74" y="-102" width="14" height="30" rx="6" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+      <rect x="60" y="-102" width="14" height="30" rx="6" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+      <rect x="-62" y="-122" width="124" height="86" rx="16" fill="#b5541c"/>
+      <rect x="-50" y="-112" width="100" height="66" rx="10" fill="#fffdf7"/>
+      <rect x="-52" y="-32" width="104" height="88" rx="16" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+      <rect x="-30" y="-14" width="60" height="38" rx="8" fill="#fdf1dc" stroke="#8f3d10" stroke-width="5"/>
+      <circle cx="18" cy="-4" r="4" fill="#8f3d10"/>
+      <rect x="-38" y="56" width="24" height="34" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+      <rect x="14" y="56" width="24" height="34" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+    </g>
+    <g id="paper16">
+      <rect x="-34" y="-46" width="68" height="92" rx="6" fill="#fffdf7" stroke="#8f3d10" stroke-width="5"/>
+      <line x1="-20" y1="-26" x2="20" y2="-26" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-20" y1="-8" x2="20" y2="-8" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-20" y1="10" x2="12" y2="10" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-20" y1="28" x2="18" y2="28" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- speech bubble from the first robot -->
+  <g transform="translate(300,120)">
+    <path d="M -170 -60 Q -170 -88 -142 -88 L 170 -88 Q 198 -88 198 -60 L 198 4 Q 198 32 170 32 L -60 32 L -96 66 L -86 32 L -142 32 Q -170 32 -170 4 Z"
+          fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+    <text x="14" y="-36" text-anchor="middle" font-size="30" font-weight="bold" fill="#8f3d10">"One specific job:</text>
+    <text x="14" y="6" text-anchor="middle" font-size="30" font-weight="bold" fill="#8f3d10">check this."</text>
+  </g>
+
+  <!-- robot 1: handing off the work -->
+  <g transform="translate(230,400)">
+    <use href="#bot16"/>
+    <path d="M -26 -86 Q -20 -94 -14 -86" fill="none" stroke="#4a2c17" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 14 -86 Q 20 -94 26 -86" fill="none" stroke="#4a2c17" stroke-width="5" stroke-linecap="round"/>
+    <path d="M -14 -68 Q 0 -56 14 -68" fill="none" stroke="#4a2c17" stroke-width="5" stroke-linecap="round"/>
+    <!-- extended arm with the paper -->
+    <path d="M 52 -8 Q 96 -20 128 -24" fill="none" stroke="#8f3d10" stroke-width="12" stroke-linecap="round"/>
+    <g transform="translate(180,-24) rotate(6) scale(0.9)"><use href="#paper16"/></g>
+  </g>
+
+  <!-- handoff arrow -->
+  <path d="M 430 300 Q 470 284 510 300" fill="none" stroke="#c98a4b" stroke-width="7" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <path d="M 510 300 l -18 -11 m 18 11 l -21 6" fill="none" stroke="#c98a4b" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- robot 2: identical, reaching to take the job, magnifier ready -->
+  <g transform="translate(700,400)">
+    <use href="#bot16"/>
+    <circle cx="-20" cy="-84" r="6" fill="#4a2c17"/>
+    <circle cx="20" cy="-84" r="6" fill="#4a2c17"/>
+    <path d="M -12 -66 Q 0 -58 12 -66" fill="none" stroke="#4a2c17" stroke-width="5" stroke-linecap="round"/>
+    <!-- reaching arm -->
+    <path d="M -52 -8 Q -96 -18 -128 -22" fill="none" stroke="#8f3d10" stroke-width="12" stroke-linecap="round"/>
+    <!-- magnifier in the other hand -->
+    <path d="M 52 -4 Q 74 4 84 16" fill="none" stroke="#8f3d10" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="102" cy="38" r="26" fill="none" stroke="#8f3d10" stroke-width="8"/>
+    <line x1="84" y1="18" x2="94" y2="28" stroke="#8f3d10" stroke-width="9" stroke-linecap="round"/>
+  </g>
+
+  <!-- captions under each -->
+  <text x="230" y="560" text-anchor="middle" font-size="24" font-weight="bold" letter-spacing="2" fill="#8f3d10">THE AI THAT DID THE WORK</text>
+  <text x="700" y="560" text-anchor="middle" font-size="24" font-weight="bold" letter-spacing="2" fill="#8f3d10">A FRESH AI THAT CHECKS IT</text>
+</svg>
