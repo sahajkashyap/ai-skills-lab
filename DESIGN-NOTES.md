@@ -134,6 +134,11 @@ palette: the four-panel hand-off comic (AI reads, hands it to a person, the
 person reads, the final okay), the checker-team diagram, the Silicon Man,
 and the vending-machine-versus-thinking-partner pair.
 
+A later pass split the hand-off comic the way a picture book demands: its
+first two panels (read it all, get the short version) stay with the
+summarizing slide, and the full five-panel loop moved to the closing
+checklist slide it illustrates, so the pictures land where the words do.
+
 **Why:** Generated art is part of the production pipeline and it is good at
 scenes. But when a slide's idea is a system — a hand-off, a dispatch, an
 absence where a heart should be — a drawn diagram states the idea more
