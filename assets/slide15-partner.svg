@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <g id="bot15">
+      <line x1="-20" y1="-88" x2="-27" y2="-108" stroke="#8f3d10" stroke-width="5" stroke-linecap="round"/>
+      <line x1="20" y1="-88" x2="27" y2="-108" stroke="#8f3d10" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="-29" cy="-112" r="7" fill="#c98a4b" stroke="#8f3d10" stroke-width="4"/>
+      <circle cx="29" cy="-112" r="7" fill="#c98a4b" stroke="#8f3d10" stroke-width="4"/>
+      <rect x="-46" y="-90" width="92" height="62" rx="12" fill="#b5541c"/>
+      <rect x="-37" y="-82" width="74" height="47" rx="8" fill="#fffdf7"/>
+      <circle cx="-14" cy="-62" r="4.5" fill="#4a2c17"/>
+      <circle cx="14" cy="-62" r="4.5" fill="#4a2c17"/>
+      <path d="M -8 -49 Q 0 -43 8 -49" fill="none" stroke="#4a2c17" stroke-width="3.5" stroke-linecap="round"/>
+      <rect x="-38" y="-24" width="76" height="62" rx="12" fill="#fffdf7" stroke="#8f3d10" stroke-width="5"/>
+      <rect x="-21" y="-11" width="42" height="26" rx="6" fill="#fdf1dc" stroke="#8f3d10" stroke-width="4"/>
+    </g>
+    <g id="person15">
+      <circle cx="0" cy="-84" r="26" fill="#c98a4b"/>
+      <path d="M -30 -54 Q 0 -68 30 -54 L 34 36 Q 34 48 22 48 L -22 48 Q -34 48 -34 36 Z" fill="#c98a4b"/>
+    </g>
+    <g id="candy">
+      <rect x="-26" y="-11" width="52" height="22" rx="9" fill="#e9b458" stroke="#8f3d10" stroke-width="4"/>
+      <path d="M -26 0 L -40 -9 L -40 9 Z" fill="#c98a4b" stroke="#8f3d10" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M 26 0 L 40 -9 L 40 9 Z" fill="#c98a4b" stroke="#8f3d10" stroke-width="4" stroke-linejoin="round"/>
+    </g>
+    <g id="panel15">
+      <rect x="0" y="0" width="860" height="440" rx="18" fill="#fdf6e3" stroke="#b5541c" stroke-width="6"/>
+    </g>
+  </defs>
+
+  <!-- ================= PANEL 1: THE VENDING MACHINE ================= -->
+  <g transform="translate(20,15)">
+    <use href="#panel15"/>
+    <!-- vending machine with a robot face -->
+    <g transform="translate(250,215)">
+      <rect x="-120" y="-165" width="240" height="330" rx="18" fill="#e9b458" stroke="#8f3d10" stroke-width="7"/>
+      <!-- robot face at top -->
+      <rect x="-85" y="-140" width="170" height="60" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="5"/>
+      <circle cx="-30" cy="-110" r="7" fill="#4a2c17"/>
+      <circle cx="30" cy="-110" r="7" fill="#4a2c17"/>
+      <line x1="-12" y1="-92" x2="12" y2="-92" stroke="#4a2c17" stroke-width="4" stroke-linecap="round"/>
+      <!-- window with rows of answers -->
+      <rect x="-85" y="-62" width="170" height="120" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="5"/>
+      <g transform="translate(-48,-30) scale(0.55)"><use href="#candy"/></g>
+      <g transform="translate(10,-30) scale(0.55)"><use href="#candy"/></g>
+      <g transform="translate(58,-30) scale(0.55)"><use href="#candy"/></g>
+      <g transform="translate(-48,20) scale(0.55)"><use href="#candy"/></g>
+      <g transform="translate(10,20) scale(0.55)"><use href="#candy"/></g>
+      <g transform="translate(58,20) scale(0.55)"><use href="#candy"/></g>
+      <!-- coin slot -->
+      <rect x="96" y="-40" width="14" height="34" rx="6" fill="#8f3d10" transform="rotate(0)"/>
+      <!-- dispenser slot spitting a candy bar -->
+      <rect x="-70" y="90" width="140" height="40" rx="10" fill="#8f3d10"/>
+      <g transform="translate(115,112) rotate(18)"><use href="#candy"/></g>
+      <path d="M 76 112 Q 92 108 100 110" fill="none" stroke="#c98a4b" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
+    </g>
+    <!-- person catching, hands out -->
+    <g transform="translate(570,290) scale(1.2)">
+      <use href="#person15"/>
+      <path d="M -28 -30 Q -60 -44 -80 -36" fill="none" stroke="#c98a4b" stroke-width="14" stroke-linecap="round"/>
+    </g>
+    <text x="430" y="410" text-anchor="middle" font-size="24" font-weight="bold" letter-spacing="2" fill="#8f3d10">THE VENDING MACHINE: IT JUST SPITS OUT ANSWERS</text>
+  </g>
+
+  <!-- ================= PANEL 2: THE THINKING PARTNER ================= -->
+  <g transform="translate(20,530)">
+    <use href="#panel15"/>
+    <!-- whiteboard -->
+    <g transform="translate(430,140)">
+      <rect x="-190" y="-95" width="380" height="190" rx="12" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+      <text x="-160" y="-42" font-size="30" font-weight="bold" fill="#8f3d10">STEP 1</text>
+      <line x1="-40" y1="-52" x2="150" y2="-52" stroke="#c98a4b" stroke-width="6" stroke-linecap="round"/>
+      <text x="-160" y="18" font-size="30" font-weight="bold" fill="#8f3d10">STEP 2</text>
+      <line x1="-40" y1="8" x2="120" y2="8" stroke="#c98a4b" stroke-width="6" stroke-linecap="round"/>
+      <text x="-160" y="78" font-size="30" font-weight="bold" fill="#8f3d10">STEP 3</text>
+      <line x1="-40" y1="68" x2="135" y2="68" stroke="#c98a4b" stroke-width="6" stroke-linecap="round"/>
+      <!-- board legs -->
+      <line x1="-120" y1="95" x2="-140" y2="150" stroke="#8f3d10" stroke-width="7" stroke-linecap="round"/>
+      <line x1="120" y1="95" x2="140" y2="150" stroke="#8f3d10" stroke-width="7" stroke-linecap="round"/>
+    </g>
+    <!-- table -->
+    <ellipse cx="430" cy="330" rx="180" ry="28" fill="#e9d9b8" stroke="#8f3d10" stroke-width="6"/>
+    <!-- person at left, gesturing -->
+    <g transform="translate(210,290)">
+      <use href="#person15"/>
+      <path d="M 26 -34 Q 56 -50 70 -44" fill="none" stroke="#c98a4b" stroke-width="14" stroke-linecap="round"/>
+    </g>
+    <!-- robot at right, pointing at board -->
+    <g transform="translate(660,300)">
+      <use href="#bot15"/>
+      <path d="M -38 -8 Q -62 -26 -72 -46" fill="none" stroke="#8f3d10" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <!-- small second robot between them at the table -->
+    <g transform="translate(452,318) scale(0.62)">
+      <use href="#bot15"/>
+    </g>
+    <text x="430" y="410" text-anchor="middle" font-size="24" font-weight="bold" letter-spacing="2" fill="#8f3d10">THE THINKING PARTNER: YOU FIGURE IT OUT TOGETHER</text>
+  </g>
+</svg>
