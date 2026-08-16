@@ -91,6 +91,18 @@
     font-weight: 700; font-size: 0.85em;
     flex-shrink: 0;
   }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { display: flex; align-items: baseline; gap: 0.6em; font-size: clamp(1rem, 2.3vw, 1.7rem); margin-bottom: 0.5em; }
+  .checklist .cb {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 1.2em; height: 1.2em;
+    border: 0.12em solid var(--rust);
+    border-radius: 0.25em;
+    color: var(--rust);
+    font-weight: 700; font-size: 0.9em;
+    flex-shrink: 0;
+    position: relative; top: 0.15em;
+  }
   nav {
     position: fixed;
     bottom: 1.2rem;
@@ -256,6 +268,9 @@
     <p>Trips. Parties. School projects. Big jobs at work. AI can help you map it out.</p>
     <div class="try"><b>Try asking</b>
     "Make me a 3-day plan to clean out my office."</div>
+    <div class="try"><b>Then try a big one</b>
+    "I fly to Thailand for work on Monday. What do I need to do before I go?"</div>
+    <p class="say">Give it details: your dates, your city, the time of year. The more you share, the better the plan.</p>
   </div>
   <img class="art" src="assets/slide10.jpg" alt="A robot laying out a plan">
   <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>10 / 20</span></div>
@@ -275,8 +290,10 @@
     <h2>AI Can Make Stuff Up</h2>
     <p class="kicker">New word: Hallucination</p>
     <p class="word-big" style="font-size:clamp(1.3rem,3vw,2.2rem)">hə-loo-sə-NAY-shun</p>
-    <p>It's when AI tells you something that sounds true… but is not true at all.</p>
-    <p>It might give you a fake fact or a fake name. It does this with a smile, like it is sure. But it is wrong.</p>
+    <p>AI can be 100% confident when it is right, and just as confident when it is wrong.</p>
+    <p>So when do you double-check? <b>Match it to the stakes.</b></p>
+    <p><b>The weather, a ball game score:</b> you are probably fine.<br>
+    <b>A research report, a financial analysis:</b> ask for the sources and the data, ask it to verify its facts, or use its research mode.</p>
   </div>
   <img class="art" src="assets/slide12.jpg" alt="A robot pointing at an empty speech bubble">
   <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>12 / 20</span></div>
@@ -285,10 +302,14 @@
 <!-- SLIDE 13 -->
 <section class="slide has-art">
   <div class="text-col">
-    <p class="kicker">Problem 1 of 4 · Things to watch for</p>
-    <h2>Doesn't know what's new</h2>
-    <p>AI learned from old books, websites, and stories. It may not know what happened last week, or even yesterday.</p>
-    <p>If you need today's news or fresh facts, double-check with a real source.</p>
+    <p class="kicker">We watch out · How to double-check</p>
+    <h2>Make it show its work</h2>
+    <p>You do not have to just trust it. Ask for the evidence.</p>
+    <div class="try"><b>Try asking</b>
+    "Send me the links to your sources, so I can verify this myself."</div>
+    <div class="try"><b>Or push harder</b>
+    "Check several websites and tell me if this is real. How sure are you, as a percentage?"</div>
+    <p class="say">Especially for anything recent. What AI learned may be months old.</p>
   </div>
   <img class="art" src="assets/slide13.jpg" alt="A puzzled robot reading a newspaper">
   <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>13 / 20</span></div>
@@ -297,10 +318,11 @@
 <!-- SLIDE 14 -->
 <section class="slide has-art">
   <div class="text-col">
-    <p class="kicker">Problem 2 of 4 · Things to watch for</p>
-    <h2>Can't feel</h2>
-    <p>AI does not have a heart. It does not really care. It just sounds like it does because it learned from people who do.</p>
-    <p>Feelings, comfort, and tough talks still belong to humans.</p>
+    <p class="kicker">Problem 1 of 3 · Things to watch for</p>
+    <h2>The Tin Man</h2>
+    <p>AI does not have a heart.</p>
+    <p>It uses our words and our language, so it sounds like someone who cares on the other end. It was trained to reflect the people who built it.</p>
+    <p class="say">When something matters deeply, it can help you write. But your words are more than silicon.</p>
   </div>
   <img class="art" src="assets/slide14.jpg" alt="A person with a glowing heart standing beside a robot">
   <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>14 / 20</span></div>
@@ -309,10 +331,11 @@
 <!-- SLIDE 15 -->
 <section class="slide has-art">
   <div class="text-col">
-    <p class="kicker">Problem 3 of 4 · Things to watch for</p>
+    <p class="kicker">Problem 2 of 3 · Things to watch for</p>
     <h2>Doesn't know you</h2>
     <p>AI doesn't know your job, your team, your boss, or your customers. It is starting from zero every time.</p>
-    <p>Tell it who you are and what you need. The more you share, the better it helps.</p>
+    <p>The more specific you are, and the more details you give it, the more precise it can be. Don't have the details? Ask it to help you fill them in.</p>
+    <p class="say">Used well, it is more than a vending machine. It is a thinking partner.</p>
   </div>
   <img class="art" src="assets/slide15.jpg" alt="A robot imagining a cloud of vague shapes">
   <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>15 / 20</span></div>
@@ -321,10 +344,15 @@
 <!-- SLIDE 16 -->
 <section class="slide has-art">
   <div class="text-col">
-    <p class="kicker">Problem 4 of 4 · Things to watch for</p>
-    <h2>Not always right</h2>
-    <p>Even when AI sounds smart and sure, it can still be wrong. Smart-sounding does not mean correct.</p>
-    <p>Always check its work before you send, share, or save it.</p>
+    <p class="kicker">Problem 3 of 3 · Things to watch for</p>
+    <h2>You're Responsible</h2>
+    <p>Think of it like work. When a mistake goes out, the person who signed off on it owns it.</p>
+    <p><b>With AI, the one who signs off is you.</b></p>
+    <p style="margin-bottom:1%">When in doubt:</p>
+    <ul class="numlist">
+      <li><span class="n">1</span> Read your own work.</li>
+      <li><span class="n">2</span> Ask a fresh AI, one that has never seen the work, to fact-check it and report back.</li>
+    </ul>
   </div>
   <img class="art" src="assets/slide16.jpg" alt="A robot holding a page under a magnifying glass showing an X">
   <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>16 / 20</span></div>
@@ -362,6 +390,8 @@
     <p class="big">Way #2 we team up:</p>
     <h2>AI writes a draft.<br>You fix it.</h2>
     <p>AI gets you started fast. Then you make it sound like you.</p>
+    <p><b>Or flip it:</b> share a sample of your own writing so it learns how you sound, and hand it your ideas, as many as you can.</p>
+    <p class="say">The words can start with AI. The thinking stays with you.</p>
   </div>
   <img class="art" src="assets/slide19.jpg" alt="A robot handing over a page while a human hand edits it with a pencil">
   <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>19 / 20</span></div>
@@ -373,7 +403,12 @@
     <p class="kicker">How we work with AI</p>
     <p class="big">Way #3 we team up:</p>
     <h2>AI gives an answer.<br>You check it.</h2>
-    <p>Your eyes catch what AI misses. Together, the work is stronger.</p>
+    <ul class="checklist">
+      <li><span class="cb">✓</span> AI gives you an answer.</li>
+      <li><span class="cb">✓</span> A second AI, an agent, checks it.</li>
+      <li><span class="cb">✓</span> You read it yourself.</li>
+    </ul>
+    <p class="say">Your eyes catch what AI misses. Together, the work is stronger.</p>
   </div>
   <img class="art" src="assets/slide20.jpg" alt="A person examining a robot's page with a magnifying glass">
   <div class="footer"><span>Module 1 · What AI Is and What It Can't Do</span><span>20 / 20</span></div>
