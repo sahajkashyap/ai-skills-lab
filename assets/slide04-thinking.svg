@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 640" font-family="Helvetica, Arial, sans-serif">
+  <!-- ============ the person, typing ============ -->
+  <g transform="translate(200,330)">
+    <!-- head + hair + face -->
+    <circle cx="-42" cy="-96" r="7" fill="#eebd93" stroke="#4a2c17" stroke-width="3"/>
+    <circle cx="42" cy="-96" r="7" fill="#eebd93" stroke="#4a2c17" stroke-width="3"/>
+    <circle cx="0" cy="-96" r="42" fill="#eebd93" stroke="#4a2c17" stroke-width="4"/>
+    <path d="M -42 -106 Q -44 -138 0 -138 Q 44 -138 42 -106 Q 26 -122 6 -120 Q -14 -122 -42 -106 Z"
+          fill="#5b3a1e" stroke="#4a2c17" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle cx="-15" cy="-97" r="4.5" fill="#4a2c17"/>
+    <circle cx="15" cy="-97" r="4.5" fill="#4a2c17"/>
+    <path d="M -11 -78 Q 0 -71 11 -78" fill="none" stroke="#4a2c17" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- torso -->
+    <path d="M -52 -50 Q 0 -66 52 -50 L 58 60 L -58 60 Z" fill="#2f6b5e" stroke="#4a2c17" stroke-width="5"/>
+    <!-- arms typing -->
+    <path d="M -50 -36 Q -78 -6 -52 24" fill="none" stroke="#2f6b5e" stroke-width="24" stroke-linecap="round"/>
+    <path d="M 50 -36 Q 78 -6 52 24" fill="none" stroke="#2f6b5e" stroke-width="24" stroke-linecap="round"/>
+    <circle cx="-46" cy="34" r="13" fill="#eebd93" stroke="#4a2c17" stroke-width="4"/>
+    <circle cx="46" cy="34" r="13" fill="#eebd93" stroke="#4a2c17" stroke-width="4"/>
+  </g>
+  <!-- desk + laptop -->
+  <rect x="60" y="392" width="330" height="18" rx="9" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+  <rect x="90" y="410" width="16" height="150" rx="8" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+  <rect x="344" y="410" width="16" height="150" rx="8" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+  <g transform="translate(225,392)">
+    <path d="M -60 0 L -50 -74 Q -49 -82 -41 -82 L 41 -82 Q 49 -82 50 -74 L 60 0 Z" fill="#e9b458" stroke="#8f3d10" stroke-width="5"/>
+    <rect x="-42" y="-70" width="84" height="56" rx="5" fill="#fffdf7" stroke="#8f3d10" stroke-width="4"/>
+    <line x1="-30" y1="-54" x2="18" y2="-54" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-30" y1="-40" x2="28" y2="-40" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-30" y1="-26" x2="6" y2="-26" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="225" y="610" text-anchor="middle" font-size="25" font-weight="bold" letter-spacing="2" fill="#8f3d10">YOUR WORDS GO IN</text>
+
+  <!-- ============ the flow ============ -->
+  <path d="M 400 330 Q 490 300 570 330" fill="none" stroke="#c98a4b" stroke-width="7" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <path d="M 570 330 l -20 -12 m 20 12 l -23 6" fill="none" stroke="#c98a4b" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- ============ the robot, thinking, completing the puzzle ============ -->
+  <g transform="translate(760,390)">
+    <line x1="-28" y1="-118" x2="-38" y2="-148" stroke="#8f3d10" stroke-width="7" stroke-linecap="round"/>
+    <line x1="28" y1="-118" x2="38" y2="-148" stroke="#8f3d10" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="-40" cy="-152" r="9" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+    <circle cx="40" cy="-152" r="9" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+    <rect x="-74" y="-102" width="14" height="30" rx="6" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+    <rect x="60" y="-102" width="14" height="30" rx="6" fill="#c98a4b" stroke="#8f3d10" stroke-width="5"/>
+    <rect x="-62" y="-122" width="124" height="86" rx="16" fill="#b5541c"/>
+    <rect x="-50" y="-112" width="100" height="66" rx="10" fill="#fffdf7"/>
+    <!-- focused, pleased face: looking up at its thought -->
+    <circle cx="-20" cy="-86" r="6" fill="#4a2c17"/>
+    <circle cx="20" cy="-86" r="6" fill="#4a2c17"/>
+    <path d="M -12 -66 Q 0 -59 12 -66" fill="none" stroke="#4a2c17" stroke-width="5" stroke-linecap="round"/>
+    <rect x="-52" y="-32" width="104" height="88" rx="16" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+    <rect x="-30" y="-14" width="60" height="38" rx="8" fill="#fdf1dc" stroke="#8f3d10" stroke-width="5"/>
+    <circle cx="18" cy="-4" r="4" fill="#8f3d10"/>
+    <rect x="-38" y="56" width="24" height="34" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+    <rect x="14" y="56" width="24" height="34" rx="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+    <!-- hand to chin: thinking -->
+    <path d="M -52 -10 Q -76 -24 -72 -52" fill="none" stroke="#8f3d10" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <!-- thought bubble trail -->
+  <circle cx="682" cy="212" r="10" fill="#fffdf7" stroke="#8f3d10" stroke-width="4"/>
+  <circle cx="702" cy="176" r="14" fill="#fffdf7" stroke="#8f3d10" stroke-width="5"/>
+  <!-- the thought: a puzzle nearly done, last piece arriving -->
+  <g transform="translate(810,105)">
+    <rect x="-118" y="-72" width="236" height="150" rx="26" fill="#fffdf7" stroke="#8f3d10" stroke-width="6"/>
+    <!-- placed pieces: 3x2 grid with one gap -->
+    <g stroke="#8f3d10" stroke-width="4">
+      <rect x="-93" y="-46" width="56" height="46" rx="8" fill="#e9b458"/>
+      <rect x="-33" y="-46" width="56" height="46" rx="8" fill="#f1e3c8"/>
+      <rect x="27" y="-46" width="56" height="46" rx="8" fill="#e9b458"/>
+      <rect x="-93" y="6" width="56" height="46" rx="8" fill="#f1e3c8"/>
+      <rect x="-33" y="6" width="56" height="46" rx="8" fill="#e9b458"/>
+      <!-- gap at bottom-right; dashed outline shows where the last piece goes -->
+      <rect x="27" y="6" width="56" height="46" rx="8" fill="none" stroke-dasharray="3 9"/>
+    </g>
+    <!-- the last piece, sliding in -->
+    <rect x="96" y="30" width="56" height="46" rx="8" fill="#f1e3c8" stroke="#8f3d10" stroke-width="4" transform="rotate(10 124 53)"/>
+    <path d="M 92 44 Q 80 40 70 38" fill="none" stroke="#c98a4b" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
+  </g>
+  <text x="760" y="610" text-anchor="middle" font-size="25" font-weight="bold" letter-spacing="2" fill="#8f3d10">IT FIGURES OUT WHAT COMES NEXT</text>
+</svg>
