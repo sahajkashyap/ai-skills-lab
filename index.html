@@ -361,6 +361,8 @@
     <textarea id="a5short" class="nb-input" rows="2" placeholder='Like: "Plan my week."'></textarea>
     <label class="nb-label" for="a5spec">Your specific ask, with the details only you know:</label>
     <textarea id="a5spec" class="nb-input" rows="3" placeholder='Like: "Plan my week. The report is due Thursday, I have school pickup at 3, and Monday is already gone."'></textarea>
+    <label class="nb-label" for="a5result">Now actually run the specific ask in your AI, and paste what it gave you back:</label>
+    <textarea id="a5result" class="nb-input" rows="4" placeholder="Paste the AI's answer here..."></textarea>
   </div>
 
   <p class="exercise-label" style="margin-top:1.5rem">Part 4 · One more time</p>
@@ -403,7 +405,7 @@
   const recall = k => { try { return localStorage.getItem('lab1-' + k) || ''; } catch (e) { return ''; } };
 
   // remember typed work as they go
-  ['nb-caught', 'nb-tell', 'a4', 'a5short', 'a5spec'].forEach(id => {
+  ['nb-caught', 'nb-tell', 'a4', 'a5short', 'a5spec', 'a5result'].forEach(id => {
     const el = $(id);
     el.value = recall(id);
     el.addEventListener('input', () => store(id, el.value));
@@ -453,6 +455,9 @@
       '',
       'My short ask:  ' + ($('a5short').value || '(not recorded)'),
       'My specific ask:  ' + ($('a5spec').value || '(not recorded)'),
+      '',
+      'What the AI gave back to my specific ask:',
+      $('a5result').value || '(not recorded)',
     ];
     const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
     const a = document.createElement('a');
